@@ -11,8 +11,8 @@ func main() {
 
 	dir, err := os.OpenRoot("../arit/bin/")
 
-	fileName := "./file"
-	tableName := "./table"
+	fileName := "./factors_file"
+	tableName := "./factors_table"
 
 	file, err := dir.Create(fileName)
 	table, err2 := dir.Create(tableName)
