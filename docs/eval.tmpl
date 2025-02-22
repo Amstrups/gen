@@ -1,0 +1,16 @@
+package {{ .Module }}
+
+func Module(Args []string) error {
+  mod := Args[0]
+  args := Args[1:]
+
+  switch mod {
+    {{ range .EvalArgs }}
+    case "{{ join .Commands }}":
+      {{ .FunctionName }}(args)
+    {{ end }}
+    default:
+      return nil
+  }
+}
+
